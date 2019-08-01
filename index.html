@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="style/abhsTable-0.0.1.css?v=0.0.15" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        #tt {
+            width: 100%;
+            height: calc(100% - 80px);
+        }
+    </style>
+    <script src="javascript/jquery-1.10.2.js"></script>
+    <script src="javascript/abhsTable-0.0.2.js?v=20190801110931"></script>
+    <script type="text/javascript">
+        $(function () {
+            var theadData = [
+				{ label: '编号', name: 'id', width: 20, align: 'center' },
+				{ label: '姓名', name: 'name', width: 60, align: 'center' },
+				{ label: '年龄', name: 'age', width: 40, align: 'center' },
+				{ label: '性别', name: 'sex', width: 40, align: 'center' },
+				{
+				    label: '操作', name: '', width: 100, align: 'center', formatter: function (index, value, row) {
+				        return "<a>" + row.name + "是个" + row.sex + "的</a>";
+				    }
+				},
+				{
+				    label: '操作', name: '', width: 100, align: 'center', formatter: function (index, value, row) {
+				        return "<a>" + row.name + "是个" + row.sex + "的</a>";
+				    }
+				},
+				{
+				    label: '操作', name: '', width: 100, align: 'center', formatter: function (index, value, row) {
+				        return "<a>" + row.name + "是个" + row.sex + "的</a>";
+				    }
+				},
+				{
+				    label: '操作', name: '', width: 100, align: 'center', formatter: function (index, value, row) {
+				        return "<a>" + row.name + "是个" + row.sex + "的</a>";
+				    }
+				},
+				{
+				    label: '操作', name: '', width: 100, align: 'center', formatter: function (index, value, row) {
+				        return "<a>" + row.name + "是个" + row.sex + "的</a>";
+				    }
+				},
+				{
+				    label: '操作', name: '', width: 100, align: 'center', formatter: function (index, value, row) {
+				        return "<a>" + row.name + "是个" + row.sex + "的</a>";
+				    }
+				},
+				{
+				    label: '操作', name: '', width: 100, align: 'center', formatter: function (index, value, row) {
+				        return "<a>" + row.name + "是个" + row.sex + "的</a>";
+				    }
+				},
+				{
+				    label: '删除', name: '', align: 'center', formatter: function (index, value, row) {
+				        return "<a>" + row.name + "是个" + row.sex + "的</a>";
+				    }
+				}
+            ];
+            var tbodyData = [
+				{ id: 1, name: '小王', age: 10, sex: '男' },
+				{ id: 2, name: '当', age: 23, sex: '男' },
+				{ id: 3, name: '节点', age: 12, sex: '男' },
+				{ id: 4, name: '科二', age: 23, sex: '男' },
+				{ id: 5, name: '开心', age: 44, sex: '男' },
+				{ id: 6, name: '为', age: 12, sex: '男' },
+				{ id: 7, name: '看我', age: 22, sex: '男' },
+				{ id: 8, name: '看', age: 43, sex: '男' },
+				{ id: 9, name: '考虑', age: 15, sex: '男' },
+				{ id: 10, name: '为额', age: 18, sex: '男' },
+				{ id: 11, name: '熊', age: 32, sex: '男' },
+				{ id: 12, name: '下', age: 51, sex: '男' },
+				{ id: 13, name: '前往', age: 23, sex: '男' },
+				{ id: 14, name: '我去', age: 28, sex: '男' },
+				{ id: 15, name: '问', age: 36, sex: '男' },
+				{ id: 16, name: '跳', age: 46, sex: '男' },
+            ];
+            $('#tt').abhsTable({
+                theadData: theadData,//头部栏目
+                tbodyData: tbodyData,//tbody内容
+                tableBordered: true,//是否边框
+                tableStriped: true,//是否隔行变色
+                tableHover: true,//是否划过变色
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="tt" class="abhs_table">
+    </div>
+
+</body>
+</html>
